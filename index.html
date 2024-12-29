@@ -6,15 +6,17 @@
     <title>Ferrer Line Soluções Financeiras</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="item_fixed">
         <li>
-        <a href="https://wa.me/+5511915333490" title="Contato via Whatsapp">
-            <img class="logo" src="./img/wpp2.png" alt="Logo do Whatsapp"></a>
+            <a href="https://wa.me/+5511915333490" title="Contato via Whatsapp">
+                <img class="logo" src="./img/wpp2.png" alt="Logo do Whatsapp">
+            </a>
         </li>
+        <button class="close-btn" title="Fechar" onclick="closeWhatsApp()">×</button>
     </div>
     <header>
         <div class="t_main">
@@ -36,15 +38,25 @@
             </div>
         </div>
     </header>
-    <section>
-        <div class="slide">
-            <img class="slide_img" src="./img/saque_fgts.png" alt="Garota feliz com dinheiro">
-            <div class="text-overlay">
-                <h2>Saque<br>aniversário<br>FGTS</h2>
-                <p>É rápido e facil! Entre em contato e saiba mais.</p>
+    <section class="slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img class="slide_img" src="./img/saque_fgts2.png" alt="Garota feliz com dinheiro">
+            </div>
+            <div class="slide">
+                <img class="slide_img" src="./img/consorcio_cel2.png" alt="Homem feliz com celular novo">
+            </div>
+            <div class="slide">
+                <img class="slide_img" src="./img/emprestimo_novo2.png" alt="Criança feliz indo viajar">
             </div>
         </div>
+        <div class="slide-indicators">
+            <span class="indicator" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
     </section>
+    <script src="./slide.js"></script>
     <section id="services">
         <div class="l_services">
             Soluções recomendadas para você
@@ -107,6 +119,145 @@
             </div>
         </div>
     </section>
+    <section id="news">
+        <div class="l_news">
+            Importantes para você:
+        </div>
+    </section>
+    <section id="notices">
+        <div class="notices-box">
+            <img src="./img/calendario.png" alt="Casal olahndo para o calendário" class="notice-image">
+            <div class="text_notices">
+                <p class="t_top_notice">Se planeje para não ficar no aperto</p>
+                <h2 class="p_text_notices">Calendário de Feriado<br>2025</h2>
+                <p class="t_bottom_notice">Se antecipe e veja todos os feriados e datas sazonais que teremos no proximo ano!</p>
+            </div>
+        </div>
+        <div class="notices-box">
+            <img src="./img/estudante.png" alt="Mulher anotando algo na losa de estudos" class="notice-image">
+            <div class="text_notices">
+                <p class="t_top_notice">Volta as aulas com estilo</p>
+                <h2 class="p_text_notices">Comece o ano<br>focando em você</h2>
+                <p class="t_bottom_notice">Volte a estudar no proximo ano, a gente te da uma mãozinha!</p>
+            </div>
+        </div>
+    </section>
+    <section id="partners">
+        <div class="l_partner">
+            Conheça nossos parceiros:
+        </div>
+    <section id="partner">
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/banco_bb.png" alt="Icone Banco do Brasil">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>t00.000.000/0001-91<br>0800 729 0722 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/bradesco.png" alt="Ícone do Bradesco">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>60.746.948.0001-12<br>0800 704 8383 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/c6.png" alt="Ícone do C6">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>31.872.495/0001-72<br>0800 660 0060 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/consig.png" alt="Ícone do Capital Consig">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>40.083.667/0001-10<br>0800 067 5757 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box" >
+            <div class="icon">
+                <img src="./img/crefisa.png" alt="Ícone da Crefisa">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>61.033.106/0001-86<br>0800 727 4884 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/pan.png" alt="Icone banco Pan">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>59.285.411/0001-13<br>0800 775 8686 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/parana.png" alt="Ícone do Paraná Banco">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>14.388.334/0001-99<br>0800 645 6090 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/safra.png" alt="Ícone do Safra">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>58.160.789/0001-28<br>0800 772 4136 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box">
+            <div class="icon">
+                <img src="./img/santander.png" alt="Ícone do Santander">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>90.400.888/0001-42<br>0800 702 3535 (SAC)</p>
+            </div>
+        </div>
+        <div class="partner-box" >
+            <div class="icon">
+                <img src="./img/sim.png" alt="Ícone do Banco Sim">
+            </div>
+            <div class="text">
+                <h3>Correspondente Autorizado</h3>
+            </div>
+            <div class="e_text">
+                <p><br>07.707.650/0001-10<br>SAC: 0800 720 4367</p>
+            </div>
+        </div>
+    </section>
     <footer>
         <div id=about class="footer-content">
             <div class="footer-section about-us">
@@ -123,8 +274,8 @@
             </div>
             <div id=contact class="footer-section">
                 <h3>Contato</h3>
-                <p>guilherme@ferrerlinesolucoes.com</p>
-                <p>Whatsapp: +55 11 9 1533-3490</p>
+                <p><a href="mailto:guilherme@ferrerlinesolucoes.com">Email: guilherme@ferrerlinesolucoes.com</a></p>
+                <p><a href="https://wa.me/5511915333490" target="_blank">Whatsapp: +55 (11) 9.1533-3490</a></p>
             </div>
             <div class="footer-section">
                 <h3>Redes Sociais</h3>
@@ -140,6 +291,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Ferrer Line Soluções Financeiras - Todos os direitos reservados.</p>
+            <p>Created by: M_teCode</p>
         </div>
     </footer>
 </body>
